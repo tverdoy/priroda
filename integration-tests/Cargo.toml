@@ -4,6 +4,7 @@ version = "1.0.0"
 publish = false
 edition = "2018"
 
+
 [dev-dependencies]
 anyhow = "1.0"
 borsh = "0.9"
@@ -20,3 +21,5 @@ pkg-config = "0.3.1"
 [[example]]
 name = "integration-tests"
 path = "src/tests.rs"
+[dependencies]
+serde = { version = "1.0.189", features = ["derive"] }

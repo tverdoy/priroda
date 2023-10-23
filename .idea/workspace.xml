@@ -3,12 +3,36 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/integration-tests/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/contract/Cargo.toml" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db9cd0-c2b1-48f8-8ba8-39ab20cd52b8" name="Changes" comment="" />
+    <list default="true" id="92db9cd0-c2b1-48f8-8ba8-39ab20cd52b8" name="Changes" comment="Init project">
+      <change afterPath="$PROJECT_DIR$/contract/src/user.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/src/user.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/src/utils.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contract/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/contract/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contract/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/contract/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration-tests/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/integration-tests/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration-tests/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/integration-tests/src/tests.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="zul5coob" />
@@ -20,25 +44,114 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2X7co0tzLjHTF1lxIPncA5HtcnM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cargo.Check contract.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/dimatverdoy/priroda",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.Build contract.executor": "Run",
+    "npm.build:contract.executor": "Run",
+    "npm.deploy.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.test:integration.executor": "Run",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
+  <component name="RunManager" selected="npm.test">
+    <configuration name="Check contract" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="test --target wasm32-unknown-unknown" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/contract" />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build contract" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:contract" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:integration" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:integration" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cargo.Check contract" />
+      <item itemvalue="npm.test" />
+      <item itemvalue="npm.deploy" />
+      <item itemvalue="npm.test:integration" />
+      <item itemvalue="npm.Build contract" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.Build contract" />
+        <item itemvalue="npm.test:integration" />
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../.cargo/bin" />
   </component>
@@ -50,11 +163,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697983731382</updated>
-      <workItem from="1697983733070" duration="853000" />
+      <workItem from="1697983733070" duration="11168000" />
     </task>
+    <task id="LOCAL-00001" summary="Init project">
+      <option name="closed" value="true" />
+      <created>1697984726533</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697984726533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init project" />
   </component>
 </project>

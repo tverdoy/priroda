@@ -10,8 +10,9 @@
     "build:contract": "cd contract && ./build.sh",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "cd contract && cargo test",
-    "test:integration": "npm run build:contract && cd integration-tests && cargo run --example integration-tests \"../contract/target/wasm32-unknown-unknown/release/hello_near.wasm\"",
-    "postinstall": "cd frontend && npm install && cd .. && echo rs tests && echo rs contract"
+    "test:integration": "npm run build:contract && cd integration-tests && cargo run --example integration-tests \"../contract/target/wasm32-unknown-unknown/release/contract.wasm\"",
+    "postinstall": "cd frontend && npm install && cd .. && echo rs tests && echo rs contract",
+    "fmt": "cd contract && cargo fmt && cd ../integration-tests && cargo clean"
   },
   "devDependencies": {
     "near-cli": "^3.3.0"
