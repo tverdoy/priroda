@@ -8,16 +8,8 @@
     <cargoProject FILE="$PROJECT_DIR$/contract/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db9cd0-c2b1-48f8-8ba8-39ab20cd52b8" name="Changes" comment="Init project">
-      <change afterPath="$PROJECT_DIR$/contract/src/user.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integration-tests/src/user.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integration-tests/src/utils.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contract/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/contract/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contract/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/contract/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration-tests/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/integration-tests/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration-tests/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/integration-tests/src/tests.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="92db9cd0-c2b1-48f8-8ba8-39ab20cd52b8" name="Changes" comment="Add register user">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +56,7 @@
     "npm.Build contract.executor": "Run",
     "npm.build:contract.executor": "Run",
     "npm.deploy.executor": "Run",
+    "npm.fmt.executor": "Run",
     "npm.test.executor": "Run",
     "npm.test:integration.executor": "Run",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
@@ -78,7 +71,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.test:integration">
     <configuration name="Check contract" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="test --target wasm32-unknown-unknown" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/contract" />
@@ -116,6 +109,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="fmt" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="fmt" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -138,6 +141,7 @@
     </configuration>
     <list>
       <item itemvalue="Cargo.Check contract" />
+      <item itemvalue="npm.fmt" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.deploy" />
       <item itemvalue="npm.test:integration" />
@@ -145,9 +149,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:integration" />
+        <item itemvalue="npm.fmt" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.Build contract" />
-        <item itemvalue="npm.test:integration" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
@@ -163,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697983731382</updated>
-      <workItem from="1697983733070" duration="11168000" />
+      <workItem from="1697983733070" duration="11523000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <option name="closed" value="true" />
@@ -173,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697984726533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add register user">
+      <option name="closed" value="true" />
+      <created>1698019798223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698019798223</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +194,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init project" />
+    <MESSAGE value="Add register user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add register user" />
   </component>
 </project>
