@@ -1,5 +1,5 @@
 use serde_json::json;
-use workspaces::{AccountId};
+use workspaces::{Account, AccountId};
 use serde::Deserialize;
 use crate::utils::Space;
 
@@ -15,59 +15,75 @@ pub struct User {
 
 impl User {
     /// Run register user action.
-    ///
-    /// Register main account (alice)
     pub async fn register(
-        space: &Space
-    ) -> anyhow::Result<User> {
-        space.alice
+        space: &Space,
+        account: &Account,
+        nickname: String
+    ) -> workspaces::Result<User> {
+        account
             .call( space.contract.id(), "register_user")
-            .args_json(json!({"nickname": NICKNAME}))
+            .args_json(json!({"nickname": nickname}))
             .transact()
             .await?
             .json().map_err(|e| e.into())
     }
 
     /// View get user
-    ///
-    /// Get by main account id (alice)
     pub async fn get(
-        space: &Space
-    ) -> anyhow::Result<User> {
+        space: &Space,
+        account_id: &AccountId
+    ) -> workspaces::Result<User> {
         space.alice
             .call( space.contract.id(), "get_user")
-            .args_json(json!({"account_id": space.alice.id()}))
+            .args_json(json!({"account_id": account_id}))
             .transact()
             .await?
-            .json().map_err(|e| e.into())
+            .json()
+    }
+
+    /// View get user by main account (alice)
+    pub async fn get_main(space: &Space) -> workspaces::Result<User> {
+        Self::get(space, space.alice.id()).await
     }
 }
 
 pub(crate) mod test {
+    use anyhow::Error;
     use crate::utils::{print_failed, print_passed};
     use super::*;
 
     pub(crate) async fn run_all_tests(space: &Space) -> anyhow::Result<()> {
-        let tests = [
-            (register_user, "register user")
-        ];
+        let name = "register user";
+        match register_user(space).await {
+            Ok(_) => print_passed(name),
+            Err(e) => print_failed(name, e.into())
+        }
 
-        for test in tests {
-            match test.0(space).await {
-                Ok(_) => print_passed(test.1),
-                Err(e) => print_failed(test.1, e.into())
-            }
+        let name = "get not exists user";
+        match get_not_exists_user(space).await {
+            Ok(_) => print_passed(name),
+            Err(e) => print_failed(name, e.into())
         }
 
         Ok(())
     }
 
     async fn register_user(space: &Space)-> anyhow::Result<()> {
-        let user = User::register(space).await?;
+        let user = User::register(space, &space.alice, NICKNAME.to_string()).await?;
         assert_eq!(user.nickname, NICKNAME);
 
-        let user_getter = User::get(space).await?;
+        let user_getter = User::get_main(space).await?;
         assert_eq!(user, user_getter);
+
+        Ok(())
+    }
+
+    async fn get_not_exists_user(space: &Space)-> anyhow::Result<()> {
+        let res = User::get(space, &"notexistsaccount.near".parse().unwrap()).await;
+        match res {
+            Ok(_) => return Err(Error::msg("user get must be return error")),
+            Err(e) => assert_eq!(e.kind(), &workspaces::error::ErrorKind::Execution)
+        }
 
         Ok(())
     }

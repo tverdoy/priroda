@@ -14,7 +14,6 @@ async fn main() -> anyhow::Result<()> {
 
     user::test::run_all_tests(&space).await?;
 
-
     println!("All tests is passed");
     Ok(())
 }
