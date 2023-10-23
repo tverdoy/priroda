@@ -1,0 +1,86 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"CargoProjects\">\n    <cargoProject FILE=\"$PROJECT_DIR$/integration-tests/Cargo.toml\" />\n    <cargoProject FILE=\"$PROJECT_DIR$/contract/Cargo.toml\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"92db9cd0-c2b1-48f8-8ba8-39ab20cd52b8\" name=\"Changes\" comment=\"Add register user\">\n      <change beforePath=\"$PROJECT_DIR$/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Rust File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"zul5coob\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"associatedIndex\": 6\n}]]></component>\n  <component name=\"ProjectId\" id=\"2X7co0tzLjHTF1lxIPncA5HtcnM\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Cargo.Check contract.executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/Users/dimatverdoy/priroda\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"npm.Build contract.executor\": \"Run\",\n    \"npm.build:contract.executor\": \"Run\",\n    \"npm.deploy.executor\": \"Run\",\n    \"npm.fmt.executor\": \"Run\",\n    \"npm.test.executor\": \"Run\",\n    \"npm.test:integration.executor\": \"Run\",\n    \"org.rust.cargo.project.model.PROJECT_DISCOVERY\": \"true\",\n    \"settings.editor.selected.configurable\": \"reference.settings.ide.settings.new.ui\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  },\n  \"keyToStringList\": {\n    \"GitStage.ChangesTree.GroupingKeys\": [\n      \"directory\",\n      \"module\",\n      \"repository\"\n    ]\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"npm.test:integration\">\n    <configuration name=\"Check contract\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"command\" value=\"test --target wasm32-unknown-unknown\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$/contract\" />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <envs />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Build contract\" type=\"js.build_tools.npm\" temporary=\"true\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"build:contract\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"deploy\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"deploy\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"fmt\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"fmt\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"test\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"test\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"test:integration\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"test:integration\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <list>\n      <item itemvalue=\"Cargo.Check contract\" />\n      <item itemvalue=\"npm.fmt\" />\n      <item itemvalue=\"npm.test\" />\n      <item itemvalue=\"npm.deploy\" />\n      <item itemvalue=\"npm.test:integration\" />\n      <item itemvalue=\"npm.Build contract\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"npm.test:integration\" />\n        <item itemvalue=\"npm.fmt\" />\n        <item itemvalue=\"npm.test\" />\n        <item itemvalue=\"npm.Build contract\" />\n        <item itemvalue=\"npm.deploy\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"RustProjectSettings\">\n    <option name=\"toolchainHomeDirectory\" value=\"$PROJECT_DIR$/../.cargo/bin\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"92db9cd0-c2b1-48f8-8ba8-39ab20cd52b8\" name=\"Changes\" comment=\"\" />\n      <created>1697983731382</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1697983731382</updated>\n      <workItem from=\"1697983733070\" duration=\"11523000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Init project\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1697984726533</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1697984726533</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Add register user\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698019798223</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698019798223</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Init project\" />\n    <MESSAGE value=\"Add register user\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Add register user\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c59ebac0718d468883e8e8380ad913a1fe901031)
++++ b/.idea/workspace.xml	(date 1698020469028)
+@@ -32,45 +32,45 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 6
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 6
++}</component>
+   <component name="ProjectId" id="2X7co0tzLjHTF1lxIPncA5HtcnM" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Cargo.Check contract.executor": "Run",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "/Users/dimatverdoy/priroda",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "npm.Build contract.executor": "Run",
+-    "npm.build:contract.executor": "Run",
+-    "npm.deploy.executor": "Run",
+-    "npm.fmt.executor": "Run",
+-    "npm.test.executor": "Run",
+-    "npm.test:integration.executor": "Run",
+-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Cargo.Check contract.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/dimatverdoy/priroda&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;npm.Build contract.executor&quot;: &quot;Run&quot;,
++    &quot;npm.build:contract.executor&quot;: &quot;Run&quot;,
++    &quot;npm.deploy.executor&quot;: &quot;Run&quot;,
++    &quot;npm.fmt.executor&quot;: &quot;Run&quot;,
++    &quot;npm.test.executor&quot;: &quot;Run&quot;,
++    &quot;npm.test:integration.executor&quot;: &quot;Run&quot;,
++    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "GitStage.ChangesTree.GroupingKeys": [
+-      "directory",
+-      "module",
+-      "repository"
++  &quot;keyToStringList&quot;: {
++    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
++      &quot;directory&quot;,
++      &quot;module&quot;,
++      &quot;repository&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager" selected="npm.test:integration">
+     <configuration name="Check contract" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+       <option name="command" value="test --target wasm32-unknown-unknown" />

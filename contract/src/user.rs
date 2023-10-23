@@ -3,6 +3,8 @@ use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::serde::Serialize;
 use near_sdk::{env, near_bindgen, AccountId};
 
+
+/// User is main unit in social network.
 #[derive(BorshDeserialize, BorshSerialize, Serialize)]
 pub struct User {
     pub id: AccountId,
@@ -32,5 +34,32 @@ impl Contract {
             Some(user) => user,
             None => env::panic_str("user not found"),
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn register_user() {
+        let mut contract = Contract::default();
+        let nickname = "stray";
+        contract.register_user(nickname.to_string());
+        let user = contract.get_user(env::predecessor_account_id());
+        assert_eq!(nickname, user.nickname)
+    }
+
+    #[test]
+    #[should_panic]
+    fn max_length_nickname() {
+        let mut contract = Contract::default();
+        let mut nickname = String::new();
+
+        for _ in 0..256 {
+            nickname += "n"
+        }
+
+        contract.register_user(nickname);
     }
 }
